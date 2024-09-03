@@ -1,13 +1,12 @@
 package io.devjournal.concurrency.c04.threadjoin;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class SearchInListUsingThreadsApp {
 
     // F--
-    static final List<String> WORDS = Arrays.asList(
+    static final List<String> WORDS = List.of(
                                         "the", "be", "to", "of", "and", "a", "in", "that", "have", "I", "it",
                                         "for", "not", "on", "with", "he", "as", "you", "do", "at", "this",
                                         "but", "his", "by", "from", "they", "we", "say", "her", "she", "or",
@@ -20,7 +19,7 @@ public class SearchInListUsingThreadsApp {
                                         "our", "work", "first","well", "way", "even", "new", "want", "because",
                                         "any", "these", "give", "day", "most", "us");
 
-    static final List<String> SEARCH = Arrays.asList(
+    static final List<String> SEARCH = List.of(
                                             "forest", "universe", "technology","galaxy", "the", "and",
                                             "in", "for", "on", "orange", "sky", "river", "mountain",
                                             "with", "by", "at", "one", "computer", "from", "apple");
