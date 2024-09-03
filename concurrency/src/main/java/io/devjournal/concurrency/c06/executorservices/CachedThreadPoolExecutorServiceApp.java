@@ -19,7 +19,7 @@ public class CachedThreadPoolExecutorServiceApp {
 
     // F--
     // Creating the ThreadPoolExecutor Manually to demo purposes. Otherwise, in most cases
-    // you should be using Executors.newFixedThreadPool(MAX_THREAD_POOL_SIZE)
+    // you should be using Executors.newCachedThreadPool()
     static final ExecutorService THREAD_POOL = new ThreadPoolExecutor(
                                                     MIN_THREAD_POOL_SIZE,
                                                     MAX_THREAD_POOL_SIZE,
