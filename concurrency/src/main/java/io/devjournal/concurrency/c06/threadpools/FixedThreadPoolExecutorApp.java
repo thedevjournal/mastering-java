@@ -7,7 +7,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
-public class FixedThreadPoolExecutorServiceApp {
+public class FixedThreadPoolExecutorApp {
 
     static final int MIN_THREAD_POOL_SIZE = 1;
 

@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.BiFunction;
 import java.util.stream.IntStream;
 
-public class ScheduledThreadPoolExecutorServiceApp {
+public class ScheduledThreadPoolExecutorApp {
 
     static final int MIN_THREAD_POOL_SIZE = 2;
 
