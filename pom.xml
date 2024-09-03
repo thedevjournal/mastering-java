@@ -12,6 +12,7 @@
 
     <modules>
       <module>common</module>
+      <module>concurrency</module>
       <module>data-structures</module>
       <module>design-patterns</module>
     </modules>
