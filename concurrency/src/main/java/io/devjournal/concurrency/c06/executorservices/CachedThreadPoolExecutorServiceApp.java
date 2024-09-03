@@ -37,6 +37,7 @@ public class CachedThreadPoolExecutorServiceApp {
     // F++
 
     public static void main(final String[] args) {
+
         // F--
         IntStream.rangeClosed(1, 10)
                  .sequential()
