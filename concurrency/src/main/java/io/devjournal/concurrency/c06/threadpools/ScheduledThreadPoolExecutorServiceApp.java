@@ -1,4 +1,4 @@
-package io.devjournal.concurrency.c06.executorservices;
+package io.devjournal.concurrency.c06.threadpools;
 
 import java.util.concurrent.Future;
 import java.util.concurrent.RejectedExecutionHandler;

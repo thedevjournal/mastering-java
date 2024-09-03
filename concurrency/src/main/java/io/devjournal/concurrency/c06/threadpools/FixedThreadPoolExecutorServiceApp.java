@@ -1,13 +1,13 @@
-package io.devjournal.concurrency.c06.executorservices;
+package io.devjournal.concurrency.c06.threadpools;
 
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.RejectedExecutionHandler;
-import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
-public class CachedThreadPoolExecutorServiceApp {
+public class FixedThreadPoolExecutorServiceApp {
 
     static final int MIN_THREAD_POOL_SIZE = 1;
 
@@ -19,13 +19,13 @@ public class CachedThreadPoolExecutorServiceApp {
 
     // F--
     // Creating the ThreadPoolExecutor Manually to demo purposes. Otherwise, in most cases
-    // you should be using Executors.newCachedThreadPool()
+    // you should be using Executors.newFixedThreadPool(MAX_THREAD_POOL_SIZE)
     static final ExecutorService THREAD_POOL = new ThreadPoolExecutor(
                                                     MIN_THREAD_POOL_SIZE,
                                                     MAX_THREAD_POOL_SIZE,
                                                     THREAD_KEEP_ALIVE_DURATION,
                                                     TimeUnit.MILLISECONDS,
-                                                    new SynchronousQueue<Runnable>(),
+                                                    new ArrayBlockingQueue<Runnable>(WAIT_QUEUE_SIZE),
                                                     new RejectedExecutionHandler() {
 
                                                         @Override
@@ -37,7 +37,6 @@ public class CachedThreadPoolExecutorServiceApp {
     // F++
 
     public static void main(final String[] args) {
-
         // F--
         IntStream.rangeClosed(1, 10)
                  .sequential()
